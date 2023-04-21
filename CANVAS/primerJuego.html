@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <canvas width="600" height="400"> </canvas>
+    <script>
+      let pantalla = document.querySelector("canvas");
+      let pincel = pantalla.getContext("2d");
+      let x = 0;
+      let radio = 10;
+      let xAleatorio = 0;
+      let yAleatorio = 0;
+      pincel.fillStyle = "lightgray";
+      pincel.fillRect(0, 0, 600, 400);
+
+      function dibujarCirculo(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
+        pincel.fill();
+      }
+
+      function limpiar() {
+        pincel.clearRect(0, 0, 600, 400);
+      }
+
+      function actualizarPantalla() {
+        limpiar();
+        xAleatorio = positionAleatoria(600);
+        yAleatorio = positionAleatoria(400);
+        disenaObetivo(xAleatorio, yAleatorio);
+        x++;
+      }
+
+      function disenaObetivo(x, y) {
+        dibujarCirculo(x, y, 30, "red");
+        dibujarCirculo(x, y, 20, "white");
+        dibujarCirculo(x, y, 10, "red");
+      }
+
+      function positionAleatoria(valor) {
+        return Math.floor(Math.random() * valor);
+      }
+
+      function disparar(evento) {
+        let x = evento.pageX - pantalla.offsetLeft;
+        let y = evento.pageY - pantalla.offsetTop;
+
+        if (
+          x < xAleatorio + radio &&
+          x > xAleatorio - radio &&
+          y < yAleatorio + radio &&
+          y > yAleatorio - radio
+        ) {
+          alert("Acertaste");
+        }
+      }
+
+      setInterval(actualizarPantalla, 1000);
+      pantalla.addEventListener("click", disparar);
+    </script>
+  </head>
+  <body>
+    <h1>Primer Juego</h1>
+  </body>
+</html>

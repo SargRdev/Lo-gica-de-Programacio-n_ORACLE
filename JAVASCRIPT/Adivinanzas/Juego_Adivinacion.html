@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+
+<h2>JUEGO DE ADIVINANZAS</h2>
+
+<script>
+
+
+
+    saltoLinea = () => {
+        document.write("<br>");
+        document.write("<hr>");
+    };
+    imprimir = (msj) => {
+        document.write(msj);
+        saltoLinea();
+    };
+
+    function aleatorio(max, min) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    var intentos=0;
+    
+   
+
+  
+
+while(intentos<=2){
+    var al = aleatorio(0, 10);
+    var numUsuario = parseInt(prompt("ADIVINA el numero de la loteria entre 0 y 10"));
+    if (numUsuario === al) {
+        alert("Lo lograste " + al);
+
+        imprimir("Fin");
+        break;
+    } else if(numUsuario > al){
+        alert("Intentalo de nuevo, su numero es mayor " + al);
+      
+    }else{
+        alert("Intentalo de nuevo, su numero es menor " + al);
+      
+    };
+   
+    intentos++;
+   
+ 
+};
+
+
+</script>
