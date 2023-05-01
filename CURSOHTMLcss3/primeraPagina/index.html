@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Barbería Alura</title>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-  </head>
 
-  <body>
-    <header>
-      <h1 class="titulo-principal">Barbería Alura</h1>
-    </header>
-    <img id="banner" src="banner/banner.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Barbería Alura</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
 
-    <div class="principal">
-      <h2 class="titulo-centralizado">Sobre la Barbería Alura</h2>
+<body>
+  <header>
+    <div class="caja">
+      <h1><img src="imagenes/logo.png" alt="logo barberia" /></h1>
+      <nav>
+        <ul class="navegacion">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="# ">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <img class="banner" src="banner/banner.jpg">
+
+  <main>
+    <section class="principal">
+      <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
+
+      <img class="utencilios" src="imagenes/utensilios.jpg" alt="foto utencilios de un barbero">
 
       <p>
         Ubicada en el corazón de la ciudad, la
@@ -24,13 +39,9 @@
       </p>
 
       <p id="mision">
-        <em
-          >Nuestra misión es:
-          <strong
-            >"Proporcionar autoestima y calidad de vida a nuestros
-            clientes"</strong
-          >.</em
-        >
+        <em>Nuestra misión es:
+          <strong>"Proporcionar autoestima y calidad de vida a nuestros
+            clientes"</strong>.</em>
       </p>
 
       <p>
@@ -40,10 +51,19 @@
         posee un padrón de excelencia y agilidad, garantizando calidad y
         satisfacción de nuestros clientes.
       </p>
-    </div>
+    </section>
 
-    <div class="diferenciales">
-      <h3 class="titulo-centralizado">Diferenciales</h3>
+    <section class="mapa">
+      <h3 class="titulo-principal">Nuestra Ubicación</h3>
+      <p>Nuestro establecimiento esta ubicado en el corazón de la ciudad.</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.590693170685!2d-90.5193420242681!3d14.622377385866589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a3b0dbedafd3%3A0x944524c0e4efcc47!2sLos%20capitol!5e0!3m2!1ses!2sgt!4v1682978736053!5m2!1ses!2sgt"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="diferenciales">
+      <h3 class="titulo-principal">Diferenciales</h3>
 
       <ul>
         <li class="items">Atención personalizada a los clientes</li>
@@ -52,7 +72,24 @@
         <li class="items">Profesesionales calificados</li>
       </ul>
 
-      <img src="diferenciales/diferenciales.jpg" class="imagenDiferenciales" />
+      <img src="diferenciales/diferenciales.jpg" class="imagen-diferenciales" />
+
+
+    </section>
+    <div class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8pWtdanVz3I" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
     </div>
-  </body>
+ 
+
+  </main>
+
+  <footer>
+    <img src="imagenes/logo-blanco.png" alt="logo-blanco">
+    <p class="copyright">&copy; Copyright Barberia Alura - 2023</p>
+  </footer>
+</body>
+
 </html>
